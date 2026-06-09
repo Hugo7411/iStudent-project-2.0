@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NexusTech — Premium Gaming & PC Hardware</title>
+
+    <link href="cartstyle.css" rel="stylesheet" />
+    <link href="everypage.css" rel="stylesheet" />
+    <link href="homepageslider.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div id="navbar-container"></div>
+
+    <div class="page-wrapper">
+
+        <!-- ===== HERO SLIDER ===== -->
+        <section class="hero-slider" id="heroSlider">
+            <div class="slider-track" id="sliderTrack">
+
+                <!-- Slide 1 -->
+                <div class="slide slide-1">
+                    <div class="slide-content">
+                        <span class="eyebrow">New Release 2025</span>
+                        <h1>NVIDIA RTX 5090</h1>
+                        <p>
+                            The most powerful consumer GPU ever built. 32GB GDDR7,
+                            600W of raw compute power — redefine what's possible.
+                        </p>
+
+                        <div class="slide-actions">
+                            <a href="products.html" class="btn btn-primary">Shop Now</a>
+                            <a href="products.html" class="btn btn-outline">View All Parts</a>
+                        </div>
+                    </div>
+
+                    <div class="slide-visual">
+                        <div class="gpu-visual">
+                            <div class="gpu-body">
+                                <div class="gpu-fans">
+                                    <div class="fan fan-1"></div>
+                                    <div class="fan fan-2"></div>
+                                    <div class="fan fan-3"></div>
+                                </div>
+                                <div class="gpu-label">RTX 5090</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide slide-2">
+                    <div class="slide-content">
+                        <span class="eyebrow">GOTY Collection</span>
+                        <h1>Play the Greatest Games Ever Made</h1>
+                        <p>
+                            From Elden Ring to Black Myth: Wukong —
+                            every Game of the Year winner, one place.
+                        </p>
+
+                        <div class="slide-actions">
+                            <a href="games.html" class="btn btn-primary">Browse Games</a>
+                            <a href="games.html" class="btn btn-outline">View GOTY Winners</a>
+                        </div>
+                    </div>
+
+                    <div class="slide-visual">
+                        <div class="game-visual">
+                            <div class="trophy-icon">🏆</div>
+
+                            <div class="game-tiles">
+                                <div class="gtile" style="--d:0s">Elden Ring</div>
+                                <div class="gtile" style="--d:0.1s">BG3</div>
+                                <div class="gtile" style="--d:0.2s">Wukong</div>
+                                <div class="gtile" style="--d:0.3s">GOTY</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide slide-3">
+                    <div class="slide-content">
+                        <span class="eyebrow">AMD RDNA 4</span>
+                        <h1>Radeon RX 9070 XT</h1>
+                        <p>
+                            Exceptional 4K gaming at a fraction of the competition.
+                            16GB GDDR6 — performance without compromise.
+                        </p>
+
+                        <div class="slide-actions">
+                            <a href="products.html" class="btn btn-primary">Shop Now</a>
+                            <a href="products.html" class="btn btn-outline">Compare GPUs</a>
+                        </div>
+                    </div>
+
+                    <div class="slide-visual">
+                        <div class="gpu-visual amd">
+                            <div class="gpu-body">
+                                <div class="gpu-fans">
+                                    <div class="fan fan-1"></div>
+                                    <div class="fan fan-2"></div>
+                                </div>
+                                <div class="gpu-label">RX 9070 XT</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Slider Controls -->
+            <div class="slider-controls">
+                <button class="slider-btn prev" id="sliderPrev" aria-label="Previous">
+                    &#8249;
+                </button>
+
+                <div class="slider-dots" id="sliderDots">
+                    <span class="dot active" data-idx="0"></span>
+                    <span class="dot" data-idx="1"></span>
+                    <span class="dot" data-idx="2"></span>
+                </div>
+
+                <button class="slider-btn next" id="sliderNext" aria-label="Next">
+                    &#8250;
+                </button>
+            </div>
+        </section>
+
+        <!-- ===== TOP PRODUCTS ===== -->
+        <section class="section">
+            <div class="section-header">
+                <span class="eyebrow">Featured Hardware</span>
+                <h2>Top Products</h2>
+                <p>The latest and most sought-after PC components</p>
+            </div>
+
+            <div class="product-grid" id="homeFeaturedProducts">
+                <!-- Injected by JS -->
+            </div>
+
+            <div style="text-align:center; margin-top:36px">
+                <a href="products.html" class="btn btn-outline">
+                    View All Products →
+                </a>
+            </div>
+        </section>
+
+        <div class="divider"></div>
+
+        <!-- ===== FEATURED GAMES ===== -->
+        <section class="section">
+            <div class="section-header">
+                <span class="eyebrow">GOTY Winners</span>
+                <h2>Top Games</h2>
+                <p>Award-winning titles from the past decade</p>
+            </div>
+
+            <div class="product-grid" id="homeFeaturedGames">
+                <!-- Injected by JS -->
+            </div>
+
+            <div style="text-align:center; margin-top:36px">
+                <a href="games.html" class="btn btn-outline">
+                    View All Games →
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="navigation.js"></script>
+
+    <script>
+        if (typeof injectLayout === "function") {
+            injectLayout(true);
+        }
+    </script>
+
+    <script src="homepage.js"></script>
+    <script src="mainscript.js"></script>
+    <script src="dataforallpages.js"></script>
+</body>
+</html>

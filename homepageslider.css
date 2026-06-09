@@ -1,0 +1,311 @@
+﻿/* ============================
+   HOME PAGE — Slider & Hero
+   ============================ */
+
+/* ---- Slider ---- */
+.hero-slider {
+    position: relative;
+    overflow: hidden;
+    height: calc(100vh - var(--nav-height));
+    min-height: 540px;
+    max-height: 760px;
+}
+
+.slider-track {
+    display: flex;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 60px clamp(20px, 5vw, 80px);
+    position: relative;
+    overflow: hidden;
+    gap: 40px;
+}
+
+    .slide::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+    }
+
+.slide-1::before {
+    background: radial-gradient(ellipse at 60% 50%, rgba(59,130,246,0.1) 0%, transparent 65%);
+}
+
+.slide-2::before {
+    background: radial-gradient(ellipse at 60% 50%, rgba(139,92,246,0.1) 0%, transparent 65%);
+}
+
+.slide-3::before {
+    background: radial-gradient(ellipse at 60% 50%, rgba(239,68,68,0.08) 0%, transparent 65%);
+}
+
+.slide-content {
+    flex: 1;
+    max-width: 560px;
+    z-index: 1;
+}
+
+    .slide-content h1 {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(2rem, 5vw, 3.4rem);
+        font-weight: 700;
+        letter-spacing: -1.5px;
+        line-height: 1.1;
+        margin-bottom: 18px;
+    }
+
+    .slide-content p {
+        font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 32px;
+        max-width: 440px;
+    }
+
+.slide-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+    .slide-actions .btn {
+        padding: 12px 24px;
+        font-size: 0.9rem;
+    }
+
+/* ---- GPU Visual ---- */
+.slide-visual {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.gpu-visual {
+    width: 320px;
+    height: 220px;
+    position: relative;
+}
+
+.gpu-body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1a2540 0%, #0f1a2e 60%, #0d1526 100%);
+    border-radius: 16px;
+    border: 1px solid rgba(59,130,246,0.3);
+    box-shadow: 0 0 60px rgba(59,130,246,0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gpu-visual.amd .gpu-body {
+    border-color: rgba(239, 68, 68, 0.3);
+    box-shadow: 0 0 60px rgba(239,68,68,0.12), inset 0 1px 0 rgba(255,255,255,0.05);
+}
+
+.gpu-body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(59,130,246,0.8), transparent);
+}
+
+.gpu-visual.amd .gpu-body::after {
+    background: linear-gradient(90deg, transparent, rgba(239,68,68,0.8), transparent);
+}
+
+.gpu-fans {
+    display: flex;
+    gap: 12px;
+}
+
+.fan {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid rgba(59,130,246,0.25);
+    position: relative;
+    animation: spin 3s linear infinite;
+    background: radial-gradient(circle, #1e2d4a 30%, #0f1a2e 100%);
+}
+
+.gpu-visual.amd .fan {
+    border-color: rgba(239,68,68,0.25);
+    animation-direction: reverse;
+}
+
+.fan::before {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(99,179,237,0.15);
+    background: radial-gradient(circle, #243050 0%, #0d1526 100%);
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.gpu-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+/* ---- Game Visual ---- */
+.game-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.trophy-icon {
+    font-size: 5rem;
+    filter: drop-shadow(0 0 30px rgba(251,191,36,0.5));
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.game-tiles {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.gtile {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 18px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-align: center;
+    animation: fadeUp 0.5s ease both;
+    animation-delay: var(--d);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---- Slider Controls ---- */
+.slider-controls {
+    position: absolute;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 10;
+}
+
+.slider-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    line-height: 1;
+}
+
+    .slider-btn:hover {
+        background: rgba(59,130,246,0.15);
+        border-color: var(--accent);
+        color: var(--text-primary);
+    }
+
+.slider-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    cursor: pointer;
+    transition: background 0.3s, width 0.3s;
+}
+
+    .dot.active {
+        background: var(--accent);
+        width: 24px;
+        border-radius: 4px;
+    }
+
+/* ---- Progress bar ---- */
+.slider-progress {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background: var(--accent);
+    animation: progress 6s linear infinite;
+    transform-origin: left;
+}
+
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 100%;
+    }
+}

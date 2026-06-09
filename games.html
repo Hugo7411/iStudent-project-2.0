@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Games — NexusTech</title>
+    <link href="catalog.css" rel="stylesheet" />
+    <link href="everypage.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../js/nav-component.js"></script>
+    <script>injectLayout(false);</script>
+
+    <div class="page-wrapper">
+
+        <!-- GOTY Banner -->
+        <div class="catalog-hero games-hero">
+            <div class="catalog-hero-content">
+                <span class="eyebrow">GOTY Collection</span>
+                <h1>The Best Games Ever Made</h1>
+                <p>Every Game of the Year winner from 2016 to 2025 — curated and ready to play.</p>
+            </div>
+            <div class="catalog-hero-badge">
+                <div class="goty-badge">
+                    <span class="goty-trophy">🏆</span>
+                    <span class="goty-text">10 Years<br>of GOTY</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <div class="filter-inner">
+                <span class="filter-label">Filter:</span>
+                <button class="filter-btn active" data-filter="all">All Games</button>
+                <button class="filter-btn" data-filter="Action RPG">Action RPG</button>
+                <button class="filter-btn" data-filter="Adventure">Adventure</button>
+                <button class="filter-btn" data-filter="Co-op">Co-op</button>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <section class="section">
+            <div class="product-grid" id="gamesGrid">
+                <!-- Injected by JS -->
+            </div>
+        </section>
+
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('gamesGrid');
+            if (grid) {
+                grid.innerHTML = GAMES.map(g => buildProductCard(g)).join('');
+                initAddToCartButtons();
+            }
+        });</script>
+    <script src="mainscript.js"></script>
+    <script src="navigation.js"></script>
+    <script src="dataforallpages.js"></script>
+</body>
+</html>

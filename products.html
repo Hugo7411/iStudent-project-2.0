@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products — NexusTech</title>
+    <link href="everypage.css" rel="stylesheet" />
+    <link href="catalog.css" rel="stylesheet" />
+</head>
+<body>
+    <script src="../js/nav-component.js"></script>
+    <script>injectLayout(false);</script>
+
+    <div class="page-wrapper">
+
+        <!-- Hero Banner -->
+        <div class="catalog-hero products-hero">
+            <div class="catalog-hero-content">
+                <span class="eyebrow">Latest Hardware 2025</span>
+                <h1>Build Your Dream PC</h1>
+                <p>From RTX 5090 to the fastest DDR5 memory — the newest, most powerful components available.</p>
+            </div>
+            <div class="catalog-hero-badge">
+                <div class="featured-spec">
+                    <div class="spec-line">RTX 5090</div>
+                    <div class="spec-line dim">32GB GDDR7</div>
+                    <div class="spec-line">RX 9070 XT</div>
+                    <div class="spec-line dim">16GB GDDR6</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <div class="filter-inner">
+                <span class="filter-label">Category:</span>
+                <button class="filter-btn active" data-filter="all">All Parts</button>
+                <button class="filter-btn" data-filter="Graphics Card">GPU</button>
+                <button class="filter-btn" data-filter="Processor">CPU</button>
+                <button class="filter-btn" data-filter="Memory">RAM</button>
+                <button class="filter-btn" data-filter="Storage">Storage</button>
+                <button class="filter-btn" data-filter="Motherboard">Motherboard</button>
+                <button class="filter-btn" data-filter="Cooling">Cooling</button>
+                <button class="filter-btn" data-filter="Power Supply">PSU</button>
+                <button class="filter-btn" data-filter="Case">Case</button>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <section class="section">
+            <div class="product-grid" id="productsGrid">
+                <!-- Injected by JS -->
+            </div>
+        </section>
+
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/data.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+            const grid = document.getElementById('productsGrid');
+
+            function render(filter) {
+                const items = filter === 'all' ? PRODUCTS : PRODUCTS.filter(p => p.category === filter);
+                grid.innerHTML = items.map(p => buildProductCard(p)).join('');
+                initAddToCartButtons();
+            }
+
+            render('all');
+
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    render(btn.dataset.filter);
+                });
+            });
+        });</script>
+    <script src="mainscript.js"></script>
+    <script src="navigation.js"></script>
+    <script src="dataforallpages.js"></script>
+</body>
+</html>
