@@ -22,6 +22,7 @@ Issues i cannot solve
 
 4) The navigation bar is not displaying correctly on mobile devices. It should collapse into a hamburger menu, but currently it remains in its desktop layout, making it difficult to navigate on smaller screens.
 
+
 Things i still need to add
 ========
 
@@ -34,6 +35,8 @@ Things i still need to add
    I need to write JavaScript code that listens for clicks on these buttons and updates the displayed items accordingly.
 
 4) Contact Us Page
+
+5) navigation menus on all pages except the homepage do not exist, making it difficult to navigate between different sections of the website. Users have to rely on the browser's back and forward buttons to move between pages, which is not ideal for user experience.
 
 
 How it came to be
