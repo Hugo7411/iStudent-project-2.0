@@ -64,3 +64,12 @@ Sources
 - AI used for problem solving and code generation: ChatGPT and GitHub Copilot(Coding suggestions due to being linked to my github account),Claude and Llama run on a docker setup by myself, which provided guidance on how to implement the slider, cart functionality, filtering system, and responsive navigation bar. It also helped me troubleshoot issues and optimize my code for better performance.
 - Font found using https://fonts.google.com/specimen/Space+Grotesk?preview.script=Latn
 - Styling Inspiration came from various places such as class work projects, other websites such as steam and evetech. Background was inspired by PewDiePie's latest invention Odysseus which had a cool background animation which heavily inspired me.
+
+
+ Use instructions
+ =======
+
+ Download the .zip file
+ Unzip the file
+ Open the homepage
+ Everything should work as intended.
