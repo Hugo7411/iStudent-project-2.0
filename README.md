@@ -64,6 +64,7 @@ Sources
 - AI used for problem solving and code generation: ChatGPT and GitHub Copilot(Coding suggestions due to being linked to my github account),Claude and Llama run on a docker setup by myself, which provided guidance on how to implement the slider, cart functionality, filtering system, and responsive navigation bar. It also helped me troubleshoot issues and optimize my code for better performance.
 - Font found using https://fonts.google.com/specimen/Space+Grotesk?preview.script=Latn
 - Styling Inspiration came from various places such as class work projects, other websites such as steam and evetech. Background was inspired by PewDiePie's latest invention Odysseus which had a cool background animation which heavily inspired me.
+- AI used for figuring out best way to get the cart working, bu using javascript and injecting the items rather than having them on the HTML, AI was also used to help implement this system seamlessly
 
 
  Use instructions
@@ -73,3 +74,9 @@ Sources
  Unzip the file
  Open the homepage
  Everything should work as intended.
+
+
+ Important
+ ========
+
+Although i wish i could say i didnt use AI i believe to not use it is a greater mistake, in a world where it is evolving everday i chose to accept it and use it to my advantage. i used ai in this website to enhance my own work that i had done without ai. This project is almlst entirely inspired from my Istudent 1.0 which is entirely my owm work, no AI. but to enhance the look of the website and then the cart functionality. the HTML is completely my work, used my own research on the other features that where implemented and used ai to ensure everything works.
