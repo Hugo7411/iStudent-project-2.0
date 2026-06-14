@@ -80,3 +80,13 @@ Sources
  ========
 
 Although i wish i could say i didnt use AI i believe to not use it is a greater mistake, in a world where it is evolving everday i chose to accept it and use it to my advantage. i used ai in this website to enhance my own work that i had done without ai. This project is almlst entirely inspired from my Istudent 1.0 which is entirely my owm work, no AI. but to enhance the look of the website and then the cart functionality. the HTML is completely my work, used my own research on the other features that where implemented and used ai to ensure everything works.
+
+
+For use again
+=======
+
+Homepage background split in 2 layers. 
+
+Layer 1 :Ambient glows (body::before & body::after, lines 53–79): Two large gradient orbs — one blue top-left, one purple bottom-right — that slowly drift using driftA and driftB keyframe animations at 18s and 22s cycles 
+
+Layer 2 — Particle canvas (#bg-canvas, lines 44–50): A fixed full-screen <canvas> element that sits behind everything at z-index: 0. The actual particle logic — the floating dots and connecting lines — is driven entirely by js/main.js inside the initBackground() function, not CSS. The CSS here just positions and sizes the canvas; the animation is pure JavaScript on a requestAnimationFrame loop.
